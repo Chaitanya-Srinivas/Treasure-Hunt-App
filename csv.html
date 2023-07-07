@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Download CSV file </title>  
+</head>  
+  <script src="Participant.js"></script>
+<script>  
+//create CSV file data in an array  
+const csvFileData = csvString; 
+//create a user-defined function to download CSV file   
+function download_csv_file() {  
+  
+    //define the heading for each row of the data  
+    // var csv = 'BlockNo,,\n';  
+      
+    // //merge the data with CSV  
+    // csvFileData.forEach(function(row) {  
+    //         csv += row.join(',');  
+    //         csv += "\n";  
+    // });  
+    //display the created CSV data on the web browser   
+    document.write(csvFileData); 
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);  
+    hiddenElement.target = '_blank';  
+      
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'ParticipantsData.csv';  
+    hiddenElement.click();  
+}  
+</script>  
+  
+<body>  
+<h3> Click the button to download the CSV file </h3>  
+  
+<!-- create an HTML button to download the CSV file on click -->  
+<button onclick="download_csv_file()"> Download CSV </button>  
+  
+</body>  
+</html>  

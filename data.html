@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style type=text/css>
+     body {
+      background-color: rgb(46, 37, 37);
+      color:white;
+     }
+     @keyframes animatedOne {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+    .Header{
+      position: relative;
+      align-items: center;
+      font-size: 2.5rem;
+      align-self: center;
+      letter-spacing: 0.1rem;
+      padding: 2vh 20vw;
+      border-radius: 5px;
+      font-family:Lucida Handwriting;
+      background-image: linear-gradient(-225deg,red 0%, rgb(255, 238, 192) 25%,rgb(255, 123, 0) 50%, rgb(246, 98, 57) 75%, rgb(246, 12, 43) 100%);
+      animation: animatedOne 2s linear infinite;
+      /* text-shadow: 0 0 18px rgb(250, 23, 12); */
+      color:black;
+      width:max-content;
+    }
+    
+    .HeaderSub{
+      position: relative;
+       left:15vw; 
+      align-items: center;
+      align-self:center;
+      font-size: 2rem;
+      width:max-content;
+      padding: 2vh 20vw 3vh 20vw;
+      font-family: cursive;
+      animation: neon 2s ease infinite;
+    }
+    
+    @keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
+    .container{
+      position: relative;
+      top:6vh;
+       /* left:10vw;  */
+    font-family: cursive;
+    overflow: hidden;
+    align-self: center;
+  
+    /* overflow-y: scroll; */
+    }
+    #station{
+      position: relative;
+      padding: 2vh;
+      align-content: center;
+
+    }
+    #stationno,#groupno{
+      position: relative;
+     
+    }
+    #stsubmit,#grsubmit{
+      position: relative;
+      left:2vw;
+    }
+    #random1{
+      position: relative;
+      font-family: cursive;
+      font-size: 2rem;
+      background-image: linear-gradient(
+    -225deg,
+    #967fed 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    orange 100%
+  );
+      top:-5vh;
+      padding: 1vh 2vw;
+      background-clip: border-box;
+      background-clip: text;
+  background-size: auto auto;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      
+}
+      /* border: 2px dashed white; */
+      
+    
+    @keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+#stamps{
+  color:rgb(243, 236, 236);
+}
+    #select{
+      position: relative;
+      top:-5vh;
+    }
+    #result1{
+      position: relative;
+      top:-5vh;
+      padding: 1vh 2vw;
+    }
+    #lab{
+      position: relative;
+      padding: 1vh 1vw;
+      font-size: 2rem;
+    }
+    button{
+      font-size: 1rem;
+      height:max-content;
+      width:max-content;
+      background-color: rgb(255, 119, 0);
+      border-radius: 0.7rem;
+      cursor: pointer;
+      font-family: cursive;
+      box-shadow: 8px 5px 2px 1px rgba(11, 3, 12, 0.2);
+      margin: 1vh 0.5vw;
+      padding: 1.1vh 2vw;
+    }
+    
+    input{
+      font-family: cursive;
+      font-size: 2rem;
+      height: 5vh;
+      width:30vw;
+      padding:1vh 0.5vw;
+     border-radius: 0.3rem;
+     border-color:darkorange;
+     box-shadow: 8px 5px 2px 1px rgba(11, 3, 12, 0.2);
+     margin-right: 1vw;
+    }
+    .LocQues,.AnimeQue{
+      position: relative;
+      left:10vw;
+    }
+    @media screen and (max-width: 920px){
+      .Header{
+        font-size: 1.2rem;
+        align-self: center;
+        width:90vw;
+        padding-left: 5vw;
+      }
+      .HeaderSub{
+        font-size: 1.1rem;
+        align-self: center;
+      padding-left: 1vw;
+      width:90vw;
+      left:6vw;
+      }
+      .AnimeQue,.LocQues{
+        left:0;
+
+      }
+      .container{
+        left:0;
+      }
+      #home{
+        margin-bottom: 5vh;
+      }
+      input{
+        width:80vw;
+        height:4vh;
+        font-size: 1.1rem;
+      }
+      button{
+        margin-top: 3vh;
+        font-size: 1.1rem;
+        padding: 0.5vh 5vw;
+      }
+      .container{
+        font-size: 1.1rem;
+      }
+      
+    }
+    @media screen and (max-width:500px){
+      .container{
+        font-size: 0.9rem;
+        left:0;
+      }
+      .AnimeQue,.LocQues{
+        left:0;
+      }
+    }
+      </style>
+</head>
+<body class="treasure" >
+  <div class="container">
+    <div class="Header" >MANGA & ANIME SOCIETY KHARAGPUR</div>
+    <div class="HeaderSub" >ANIME SEEKERS QUEST </div>
+    <div id="station" style="display: block;">
+        <input id="stationno" type="text" placeholder="Enter Station No.">
+        <button id="stsubmit">Next</button>
+    </div>
+    <h1 id = "random1"></h1>
+    <div id="group" style="display: none;">
+        <input id="groupno" type="text" placeholder="Enter Group No.">
+        <button id="grback">Back</button>
+        <button id="grsubmit">Next</button>
+        <!-- <button class="home">Go home</button> -->
+    </div>
+    <div id = "stage" style="display: none;">
+        <div id="select">
+          <button class="stageno">Start The Hunt</button>
+            <h1 id="stamps">No of stamps already present:</h1>
+            <button class="stageno">0</button>
+            <button class="stageno">1</button>
+            <button class="stageno">2</button>
+            <button class="stageno">3</button>
+            <button class="stageno">4</button>
+            <button class="stageno">5</button>
+            <!-- <button class="stageno">End</button> -->
+        </div>
+        <button id="stampBack">Back</button>
+    </div>
+    <div id="answer" style="display: none;">
+        <label for="ans" id="lab"></label>
+        <input id="ans" type="text" placeholder="Enter Answer">
+        <button id="ansubmit">Submit</button>
+        <button id="anback">Back</button>
+        <!-- <button class="home">Go home</button> -->
+    </div>
+    <div id="result" style="display: none;">
+        <h1 id="result1"></h1>
+        <!-- <button class="home">Go home</button> -->
+    </div>
+    <button id = "attemptAgain" style="display: none;">Attempt Again</button>
+    <h2 id="AnimeQue"></h2>
+    <br />
+    <h2 id = "LocQues"></h2>
+    <br />
+    <button id="home" style="display: none;" >Go home</button>
+    <button id="home" style="display: none;" >Enter Station No</button>
+  </div>
+      
+   
+</body>
+<script>
+  const participantsData = [
+    [
+    {"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"bd6340618e0628cc5a07425ce172f80415a00f1d5cc43a13403617f9b485ad4e",
+    "LocationQues":"If someone sees my love for you, I wonder where they will send me",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I love you so much that I am willing to kill for you while cutting my life by half, twice.",
+    "AnimeAns":"Misa Amane"},
+    {"blockNo":"C",
+    "prevHash":"bd6340618e0628cc5a07425ce172f80415a00f1d5cc43a13403617f9b485ad4e",
+    "hash":"dd9a7cb60279ff77370fd5041d516ec56c480084fa234f7a77faa0ece0a93a5f",
+    "LocationQues":"|Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I knew your boyfriend better than you until the clay came into the picture",
+    "AnimeAns":"Koichi Shindo"},
+    {"blockNo":"B",
+    "prevHash":"dd9a7cb60279ff77370fd5041d516ec56c480084fa234f7a77faa0ece0a93a5f",
+    "hash":"2458370912d77df66e786910de67dc50f4553c36c6986666e43dfa1364536af6",
+    "LocationQues":"For more than two generations, I was trapped over here",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"You were expecting a question but it was me.",
+    "AnimeAns":"Dio Brando"},
+    {"blockNo":"E",
+    "prevHash":"2458370912d77df66e786910de67dc50f4553c36c6986666e43dfa1364536af6",
+    "hash":"3a8dc3a58e8826fe3c2301a876dcae4b44fe0e4d57a5dede993036949e5884a7",
+    "LocationQues":"Do you remember where our fight happened after we discussed this?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"You might like a girl with an unshakable personality, which doesn't make you suitable to be my friend",
+    "AnimeAns":"Aoi Todo"},
+    {"blockNo":"D",
+    "prevHash":"3a8dc3a58e8826fe3c2301a876dcae4b44fe0e4d57a5dede993036949e5884a7",
+    "hash":"e9d2b8985c03db6c9ca27283f73a24c2c1e1b874b3d4f813f4c89f0f4fc412e4",
+    "LocationQues":"|A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A fiery heart, a fierce might,\nHe'd strike foes down with deadly light,\nHis weapon lit, the target in sight,\nA hero of the Brotherhood, his might.",
+    "AnimeAns":"Roy Mustang"},
+    {"blockNo":"A",
+    "prevHash":"e9d2b8985c03db6c9ca27283f73a24c2c1e1b874b3d4f813f4c89f0f4fc412e4",
+    "hash":"646a7f5703c02ee0952c5480bbf39381e4deef37867f0ac575bfebcb85c3df25",
+    "LocationQues":"Those who I seek vengeance against, they share a tattoo of this. As they work their magic, they can produce something similar to what is used in this place.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Sole survivor of eye-hunted clan, seeking revenge with glowing eyes,\nWearing dress named after my people, untold story it implies.\nWho am I?",
+    "AnimeAns":"Kurapika"},
+    {"blockNo":"END",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"C",
+    "prevHash":"TreasureHunt",
+    "hash":"478eeea8d05b56a0458b5dc657dbf5bb74f96ab91c45fa747e4e2e375f238b49",
+    "LocationQues":"*Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I am a huge knife,\nBut I don't cut food or flesh\nI can change to a black katana\nIncreasing my user's strength\nWho is my wielder?",
+    "AnimeAns":"Kurosaki Ichigo"},
+    {"blockNo":"E",
+    "prevHash":"478eeea8d05b56a0458b5dc657dbf5bb74f96ab91c45fa747e4e2e375f238b49",
+    "hash":"fabb82211ac4ae5f72bae12600772df52510765572a9c983c67a3c7e785eec15",
+    "LocationQues":"This is the place where I showcase my true skill openly for the first time",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I am a student in Class D,\nWith intelligence you cannot see.\nMy eyes are always closed,\nBut in the shadows, I am composed.",
+    "AnimeAns":"Kiyotaka Ayanokoji"},
+    {"blockNo":"D",
+    "prevHash":"fabb82211ac4ae5f72bae12600772df52510765572a9c983c67a3c7e785eec15",
+    "hash":"91ac9198479b45d57f61b6010923d1501aa58952d566bc497e30dd011e35d384",
+    "LocationQues":"*A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A sense of smell which rivals the gods', I smell this as I hear other people's lauds",
+    "AnimeAns":"Cinnamon"},
+    {"blockNo":"A",
+    "prevHash":"91ac9198479b45d57f61b6010923d1501aa58952d566bc497e30dd011e35d384",
+    "hash":"5b0e8d1faf9c1db7983eaa377597115ee855e45492d38b0f342c10ecaf7bc902",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"B",
+    "prevHash":"5b0e8d1faf9c1db7983eaa377597115ee855e45492d38b0f342c10ecaf7bc902",
+    "hash":"ef9cb06ffcdd5d41a0ebbe3e9eafb68a7b7588e2795a516c454b7c0829bb921c",
+    "LocationQues":"When my battles are won and my crew's duties are done, I'll plunge in the water, and soak up the sun.",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I sail a ship named after a famous whale",
+    "AnimeAns":"Whitebeard"},
+    {"blockNo":"F",
+    "prevHash":"ef9cb06ffcdd5d41a0ebbe3e9eafb68a7b7588e2795a516c454b7c0829bb921c",
+    "hash":"7ced94fae6b09bcc59e886b2793fad0fd43e41d05c76ba45d59679de0dac53cc",
+    "LocationQues":"I know where I need to go, if I need to see you",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"If I'd been born ten years earlier, and met her ten years earlier, I'd probably have been head over heels for her.",
+    "AnimeAns":"Shizuka Hiratsuka"},
+    {"blockNo":"END",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"D",
+    "prevHash":"TreasureHunt",
+    "hash":"eb390387f4471029b8590b5a4e1ac7dc6d6a0cf5732793f3de7000994a3bf679",
+    "LocationQues":"-A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Chess-loving boy becomes dictator with mind-control powers, plus robots. Who is the sibling of this boy who he got killed when he lost control of his powers?",
+    "AnimeAns":"Euphemia li Britannia"},
+    {"blockNo":"F",
+    "prevHash":"eb390387f4471029b8590b5a4e1ac7dc6d6a0cf5732793f3de7000994a3bf679",
+    "hash":"c53b83f2b1c0fa3e9d01e18056bfdf443afe64d560d84f73a1516925d58004dd",
+    "LocationQues":"Where would you send a person like this?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"Sniping like a pro in a game, only to get scared by a finger gun",
+    "AnimeAns":"Asada Shino"},
+    {"blockNo":"C",
+    "prevHash":"c53b83f2b1c0fa3e9d01e18056bfdf443afe64d560d84f73a1516925d58004dd",
+    "hash":"c39c481ea9a26169398dfef1a956af189f353f720f59b1e9c56f813656b3ec06",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"},
+    {"blockNo":"B",
+    "prevHash":"c39c481ea9a26169398dfef1a956af189f353f720f59b1e9c56f813656b3ec06",
+    "hash":"4bc148f2eb33b7030aacdce6e85b58cfd7af89b3d2eafe1b63dc2fde62eea76b",
+    "LocationQues":"My master likes spending time here with his female subordinates",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"37 years and a meaningless death,\nThe world gave me to him at his final breath.\nWhen he finally became a demon lord,\nI evolved, my powers now close to that of a god",
+    "AnimeAns":"Raphael"},
+    {"blockNo":"A",
+    "prevHash":"4bc148f2eb33b7030aacdce6e85b58cfd7af89b3d2eafe1b63dc2fde62eea76b",
+    "hash":"d59d211df5f422028a7691da4d4e8aac0525873b82ce50a41a530007db58dec1",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"E",
+    "prevHash":"d59d211df5f422028a7691da4d4e8aac0525873b82ce50a41a530007db58dec1",
+    "hash":"27cfc78dbb8abc1684885f880bbbfcf31f2a8b4305598870d8baebfb206a7d93",
+    "LocationQues":"Which place can he release his power while causing the least collateral damage",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"His power is over 9000",
+    "AnimeAns":"Goku"},
+    {"blockNo":"END",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"E",
+    "prevHash":"TreasureHunt",
+    "hash":"9e9bad5af70f32e38ac774581557eb41d5308503e703a00ae5696fbb0e661c49",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here ",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every day, I enter the hallowed halls of this esteemed institution, where the very air seems to hum with an intensity of purpose. The weight of its legacy is palpable, and with each passing moment, I am reminded of the honor - and burden - of being a part of its student body. But amidst the endless competition and striving for excellence, I find myself drawn to another battle - the one for the heart of the one I love, whose eyes shine just as brightly as the hallways of this place.",
+    "AnimeAns":"Miyuki Shirogane"},
+    {"blockNo":"A",
+    "prevHash":"9e9bad5af70f32e38ac774581557eb41d5308503e703a00ae5696fbb0e661c49",
+    "hash":"fa91f8fd5850b869bbb43289e05f580261975fc5a6a7027205aee7903834ba69",
+    "LocationQues":"There was a scene in this anime where a ball was sent with supersonic speed.\nThe location is the type of game they were playing",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Get a star when you perform your best; you'll get this, however, when you try out a jest",
+    "AnimeAns":"Tonitrus Bolt"},
+    {"blockNo":"F",
+    "prevHash":"fa91f8fd5850b869bbb43289e05f580261975fc5a6a7027205aee7903834ba69",
+    "hash":"8b89a6af80ec872fd9873ddf1a28c02077065bcd35cb5766265a9ab8c753d919",
+    "LocationQues":"As I think of my past, where should I go, haste?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a musical prodigy, with fingers so swift,\nPlaying the piano is my only true gift,\nHaunted by memories that I cannot forget,\nBut when I play music, my heart starts to reset.\nWho am I?",
+    "AnimeAns":"Kousei Arima"},
+    {"blockNo":"D",
+    "prevHash":"8b89a6af80ec872fd9873ddf1a28c02077065bcd35cb5766265a9ab8c753d919",
+    "hash":"393ecfe5b9294e1024929cf7c30fa6e15426ee1d8d83e009e23af467e017541f",
+    "LocationQues":"+A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Every poison has a different effect on me. I don't die though; they sometimes give me wings or horns even make me blank",
+    "AnimeAns":"Koro Sensei"},
+    {"blockNo":"C",
+    "prevHash":"393ecfe5b9294e1024929cf7c30fa6e15426ee1d8d83e009e23af467e017541f",
+    "hash":"07cf2182873bd9cfb94ca43c6e26dbb6310676581136d27dd0258825415aee2f",
+    "LocationQues":"+Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I love my sister. Seeing her portrayals as I photograph her, I am eager to do something like that. But I am not confident I will be able to do something like that, considering my size.",
+    "AnimeAns":"Shinju Inui"},
+    {"blockNo":"B",
+    "prevHash":"07cf2182873bd9cfb94ca43c6e26dbb6310676581136d27dd0258825415aee2f",
+    "hash":"300e7dd87c856078874ff36d18f448f279476f92f029cd9062060da6ae71634f",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"END",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"B",
+    "prevHash":"TreasureHunt",
+    "hash":"26b2aa52d46315af6f450cf4be0e77d91c6c5fbbc5a326bb4972955a39259d2e",
+    "LocationQues":"I think the question itself points you to the location",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I was transported to another world against my will.\nI just want to drink and sleep throught this ride,\nIn battles, my powers can turn the tide.\nI think.....\nWho am I?",
+    "AnimeAns":"Aqua"},
+    {"blockNo":"D",
+    "prevHash":"26b2aa52d46315af6f450cf4be0e77d91c6c5fbbc5a326bb4972955a39259d2e",
+    "hash":"78c3b7ffdb71b2b111c46ce63aa265e3d5d39ca85dcc1d0f856a3e582ed932bd",
+    "LocationQues":".A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"You cant beat me because my right hand won't let you reach me",
+    "AnimeAns":"Shinichi Izumi"},
+    {"blockNo":"A",
+    "prevHash":"78c3b7ffdb71b2b111c46ce63aa265e3d5d39ca85dcc1d0f856a3e582ed932bd",
+    "hash":"2064739daa2a2f2ce6e37e35749dd2df397fe18bdcb6f4752efcb1e7fe939ec7",
+    "LocationQues":"|With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"I am a Tsundere loli whose name is also an animal.",
+    "AnimeAns":"Taiga Aisaka"},
+    {"blockNo":"F",
+    "prevHash":"2064739daa2a2f2ce6e37e35749dd2df397fe18bdcb6f4752efcb1e7fe939ec7",
+    "hash":"5dafd8cb0f9f662330ea47d7fa83ec6abdf77cec69a2fcadf9cf317416d5cd3e",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"E",
+    "prevHash":"5dafd8cb0f9f662330ea47d7fa83ec6abdf77cec69a2fcadf9cf317416d5cd3e",
+    "hash":"cec8bf8df1ee984706cf786812b56ff4a90a54e4e40656634e2ee86e61dd9588",
+    "LocationQues":"This person is in a club that is mostly seen doing an activity,\nwhere does such activity usually occours?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I run an agency for a living which deals with the dead and\nMy super killer technique (Hissatsu) involves throwing salt.",
+    "AnimeAns":"Arataka Reigen"},
+    {"blockNo":"C",
+    "prevHash":"cec8bf8df1ee984706cf786812b56ff4a90a54e4e40656634e2ee86e61dd9588",
+    "hash":"9d69efb8e0eabc7e532fe086ab2cb9b2b8ebba2b9e22e57aa631bab748d9f7bc",
+    "LocationQues":".Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"As a flower, I don't know my own purpose. Though I write letters for others, I feel incomplete. I search for my own meaning, my own place in this world. I'll continue to grow and bloom, hoping to discover my reason for being.",
+    "AnimeAns":"Violet Evergarden"},
+    {"blockNo":"END",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"57afb3084860f53b22422b964fd9d9a8ee4453a5bd53bbfeb48768215a9141c3",
+    "LocationQues":"-With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"From the land where the sun first appears,\nComes a knight whose magic is strong and clear.\nThough his past is shrouded in shadow and fear,\nHe fights for what's right, and brings hope near.",
+    "AnimeAns":"Yami Sukihiro"},
+    {"blockNo":"B",
+    "prevHash":"57afb3084860f53b22422b964fd9d9a8ee4453a5bd53bbfeb48768215a9141c3",
+    "hash":"d63abbc74ecee4b50082eed7bbdf515375b27e53f93db6e8e2389f9d8846f7cf",
+    "LocationQues":"All that talk about upstream and downstream is reminding me of this place",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"If an insect takes 75 seconds to travel 3 meters upstream, and 50 seconds to travel the same distance downstream, what is the name of the protagonist?",
+    "AnimeAns":"Takaki Tono"},
+    {"blockNo":"E",
+    "prevHash":"d63abbc74ecee4b50082eed7bbdf515375b27e53f93db6e8e2389f9d8846f7cf",
+    "hash":"ba6a1ccd14a8390c6dfd20a538866c29493856e3512875982a70b638c21a337a",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"},
+    {"blockNo":"C",
+    "prevHash":"ba6a1ccd14a8390c6dfd20a538866c29493856e3512875982a70b638c21a337a",
+    "hash":"2fba547f34fd2099775d577bbf64f9942bfdbd5fcfb55d67bbe237d69b4c4f72",
+    "LocationQues":"Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"Though I am a demon, I cannot ride\nThe bicorn's back, it's too small for my pride.\nInstead, I serve a lich as a general, you see,\nLeading an army of undead for eternity.",
+    "AnimeAns":"Albedo"},
+    {"blockNo":"F",
+    "prevHash":"2fba547f34fd2099775d577bbf64f9942bfdbd5fcfb55d67bbe237d69b4c4f72",
+    "hash":"7ada94571f4a386a3d2603968aeb4b35272829370a879e455e1bde55ceaadd8d",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"D",
+    "prevHash":"7ada94571f4a386a3d2603968aeb4b35272829370a879e455e1bde55ceaadd8d",
+    "hash":"60da0512cc0cffe4e1f8600ca8f2dc427609dbc81e425525794d0038db6d47d2",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"END",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"D",
+    "prevHash":"TreasureHunt",
+    "hash":"50ac57b366c0a4cdca2307e61ce158de84533a47f378607cdd0029be2e1ae465",
+    "LocationQues":"+A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Every poison has a different effect on me. I don't die though; they sometimes give me wings or horns even make me blank",
+    "AnimeAns":"Koro Sensei"},
+    {"blockNo":"F",
+    "prevHash":"50ac57b366c0a4cdca2307e61ce158de84533a47f378607cdd0029be2e1ae465",
+    "hash":"b5026fa60351896e412750976aadbda4acae690253683d7f009be438df29e6ee",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"B",
+    "prevHash":"b5026fa60351896e412750976aadbda4acae690253683d7f009be438df29e6ee",
+    "hash":"bbe2a928b75fa12c21c708c74c294c91829111fa17069a7815dd663968228a82",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"A",
+    "prevHash":"bbe2a928b75fa12c21c708c74c294c91829111fa17069a7815dd663968228a82",
+    "hash":"43ed2cbeea542a6333a51ab7aae353fa374789fb92c767dc4607411fa817d9f1",
+    "LocationQues":"-With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"From the land where the sun first appears,\nComes a knight whose magic is strong and clear.\nThough his past is shrouded in shadow and fear,\nHe fights for what's right, and brings hope near.",
+    "AnimeAns":"Yami Sukihiro"},
+    {"blockNo":"E",
+    "prevHash":"43ed2cbeea542a6333a51ab7aae353fa374789fb92c767dc4607411fa817d9f1",
+    "hash":"ae1dfdb9838df36ea822230a64801909cdac8eabde1f085c515dfa61a892bcd4",
+    "LocationQues":"This is the place where I showcase my true skill openly for the first time",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I am a student in Class D,\nWith intelligence you cannot see.\nMy eyes are always closed,\nBut in the shadows, I am composed.",
+    "AnimeAns":"Kiyotaka Ayanokoji"},
+    {"blockNo":"C",
+    "prevHash":"ae1dfdb9838df36ea822230a64801909cdac8eabde1f085c515dfa61a892bcd4",
+    "hash":"b911f6ca870458a906d6f15f917f1ec0ddf01a709f053d98352e4f30d5eccc50",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"D",
+    "prevHash":"TreasureHunt",
+    "hash":"50ac57b366c0a4cdca2307e61ce158de84533a47f378607cdd0029be2e1ae465",
+    "LocationQues":"+A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Every poison has a different effect on me. I don't die though; they sometimes give me wings or horns even make me blank",
+    "AnimeAns":"Koro Sensei"},
+    {"blockNo":"C",
+    "prevHash":"50ac57b366c0a4cdca2307e61ce158de84533a47f378607cdd0029be2e1ae465",
+    "hash":"eda05956676b82c085987c814b0801139f71316e6b5f5f0cce387b095605f28c",
+    "LocationQues":"+Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I love my sister. Seeing her portrayals as I photograph her, I am eager to do something like that. But I am not confident I will be able to do something like that, considering my size.",
+    "AnimeAns":"Shinju Inui"},
+    {"blockNo":"E",
+    "prevHash":"eda05956676b82c085987c814b0801139f71316e6b5f5f0cce387b095605f28c",
+    "hash":"59c60572209b2ccb04931fb80c4487331f18ebb1d86d33c83a4b2e5b328980b7",
+    "LocationQues":"Which place can he release his power while causing the least collateral damage",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"His power is over 9000",
+    "AnimeAns":"Goku"},
+    {"blockNo":"F",
+    "prevHash":"59c60572209b2ccb04931fb80c4487331f18ebb1d86d33c83a4b2e5b328980b7",
+    "hash":"539d212b3b731933396a440f9273d6f2228c471b8e2211dbb4904853c2e1c9ea",
+    "LocationQues":"If someone sees my love for you, I wonder where they will send me",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I love you so much that I am willing to kill for you while cutting my life by half, twice.",
+    "AnimeAns":"Misa Amane"},
+    {"blockNo":"B",
+    "prevHash":"539d212b3b731933396a440f9273d6f2228c471b8e2211dbb4904853c2e1c9ea",
+    "hash":"f8041de2855802fb8bac1db9a7e48528099302db275d35d48a4917c904fd2684",
+    "LocationQues":"All that talk about upstream and downstream is reminding me of this place",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"If an insect takes 75 seconds to travel 3 meters upstream, and 50 seconds to travel the same distance downstream, what is the name of the protagonist?",
+    "AnimeAns":"Takaki Tono"},
+    {"blockNo":"A",
+    "prevHash":"f8041de2855802fb8bac1db9a7e48528099302db275d35d48a4917c904fd2684",
+    "hash":"4221b9440183a653451a7105ad8cd6c71b9868aefa60c685407f7b76183de012",
+    "LocationQues":"|With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"I am a Tsundere loli whose name is also an animal.",
+    "AnimeAns":"Taiga Aisaka"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"A",
+    "prevHash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "hash":"4a192e02a77b40c4dade80566769dbf19a631d88c275b7d084b5cec7bcedf129",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"C",
+    "prevHash":"4a192e02a77b40c4dade80566769dbf19a631d88c275b7d084b5cec7bcedf129",
+    "hash":"ff50fc65cf5650bf7050e522cf0686ae6e0cc38eb1363000c33314b62bcc3e0f",
+    "LocationQues":".Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"As a flower, I don't know my own purpose. Though I write letters for others, I feel incomplete. I search for my own meaning, my own place in this world. I'll continue to grow and bloom, hoping to discover my reason for being.",
+    "AnimeAns":"Violet Evergarden"},
+    {"blockNo":"E",
+    "prevHash":"ff50fc65cf5650bf7050e522cf0686ae6e0cc38eb1363000c33314b62bcc3e0f",
+    "hash":"4a2cc53c649f543cb91ae79e0ffe90e395ac500d97596a256ffd24a7fb5519a1",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here ",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every day, I enter the hallowed halls of this esteemed institution, where the very air seems to hum with an intensity of purpose. The weight of its legacy is palpable, and with each passing moment, I am reminded of the honor - and burden - of being a part of its student body. But amidst the endless competition and striving for excellence, I find myself drawn to another battle - the one for the heart of the one I love, whose eyes shine just as brightly as the hallways of this place.",
+    "AnimeAns":"Miyuki Shirogane"},
+    {"blockNo":"B",
+    "prevHash":"4a2cc53c649f543cb91ae79e0ffe90e395ac500d97596a256ffd24a7fb5519a1",
+    "hash":"ef8dfa40f9d9f9ff33d968fb6d40f602edf0d1f988038c2de1a02423e445c742",
+    "LocationQues":"All that talk about upstream and downstream is reminding me of this place",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"If an insect takes 75 seconds to travel 3 meters upstream, and 50 seconds to travel the same distance downstream, what is the name of the protagonist?",
+    "AnimeAns":"Takaki Tono"},
+    {"blockNo":"D",
+    "prevHash":"ef8dfa40f9d9f9ff33d968fb6d40f602edf0d1f988038c2de1a02423e445c742",
+    "hash":"80d87935ea84f7c1b071cb11c98c6ba5f09c5e357e84ec0f572ec6ec3b772bcd",
+    "LocationQues":"*A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A sense of smell which rivals the gods', I smell this as I hear other people's lauds",
+    "AnimeAns":"Cinnamon"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"B",
+    "prevHash":"TreasureHunt",
+    "hash":"4c6b085288f72a820ea8ec4f5051aadb8d3bc561b2b1d2ba504c1f5ac8789237",
+    "LocationQues":"My master likes spending time here with his female subordinates",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"37 years and a meaningless death,\nThe world gave me to him at his final breath.\nWhen he finally became a demon lord,\nI evolved, my powers now close to that of a god",
+    "AnimeAns":"Raphael"},
+    {"blockNo":"A",
+    "prevHash":"4c6b085288f72a820ea8ec4f5051aadb8d3bc561b2b1d2ba504c1f5ac8789237",
+    "hash":"a7fffd8c703310f5f454434bc05fdaedff94daad73daf81ef311eb746b1929d5",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"D",
+    "prevHash":"a7fffd8c703310f5f454434bc05fdaedff94daad73daf81ef311eb746b1929d5",
+    "hash":"05a9122bbb091d4cd42c9d8ff6a9a6e333a52cc5d7b24e55c50f74ddc23cdc43",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"F",
+    "prevHash":"05a9122bbb091d4cd42c9d8ff6a9a6e333a52cc5d7b24e55c50f74ddc23cdc43",
+    "hash":"511a98aea9b19344c926c4a98e9430d0fcdb7c7d88cbbd49c4aea54bc1ed64d4",
+    "LocationQues":"If someone sees my love for you, I wonder where they will send me",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I love you so much that I am willing to kill for you while cutting my life by half, twice.",
+    "AnimeAns":"Misa Amane"},
+    {"blockNo":"C",
+    "prevHash":"511a98aea9b19344c926c4a98e9430d0fcdb7c7d88cbbd49c4aea54bc1ed64d4",
+    "hash":"d9b6679fe1165cccfa4abdf84d3bd75e7039676633f2e6b8addb62cb80639a11",
+    "LocationQues":"|Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I knew your boyfriend better than you until the clay came into the picture",
+    "AnimeAns":"Koichi Shindo"},
+    {"blockNo":"E",
+    "prevHash":"d9b6679fe1165cccfa4abdf84d3bd75e7039676633f2e6b8addb62cb80639a11",
+    "hash":"64be01f06688cf7d6b283d17c29bd40332bad0ba9fcbc0531174348d5607f99a",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"E",
+    "prevHash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "hash":"82d813c92988ca5c9db1775a001b82a94ef552f78b35eaae82cf3410f0aee7aa",
+    "LocationQues":"This person is in a club that is mostly seen doing an activity,\nwhere does such activity usually occours?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I run an agency for a living which deals with the dead and\nMy super killer technique (Hissatsu) involves throwing salt.",
+    "AnimeAns":"Arataka Reigen"},
+    {"blockNo":"F",
+    "prevHash":"82d813c92988ca5c9db1775a001b82a94ef552f78b35eaae82cf3410f0aee7aa",
+    "hash":"da9e488c3feb2c21e144fa6fd622f766761f7bdd7fd578e1bf23919ac4237fc7",
+    "LocationQues":"I know where I need to go, if I need to see you",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"If I'd been born ten years earlier, and met her ten years earlier, I'd probably have been head over heels for her.",
+    "AnimeAns":"Shizuka Hiratsuka"},
+    {"blockNo":"D",
+    "prevHash":"da9e488c3feb2c21e144fa6fd622f766761f7bdd7fd578e1bf23919ac4237fc7",
+    "hash":"86c04ea501123d0a9de05fd3c813ec09e9f36f0c57ad6e9364f06ce75f7cfff6",
+    "LocationQues":"-A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Chess-loving boy becomes dictator with mind-control powers, plus robots. Who is the sibling of this boy who he got killed when he lost control of his powers?",
+    "AnimeAns":"Euphemia li Britannia"},
+    {"blockNo":"B",
+    "prevHash":"86c04ea501123d0a9de05fd3c813ec09e9f36f0c57ad6e9364f06ce75f7cfff6",
+    "hash":"37ecf1e8900237d6e61559e50fa9b28ac2ad5bb5c48541736aace70cf58121f3",
+    "LocationQues":"All that talk about upstream and downstream is reminding me of this place",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"If an insect takes 75 seconds to travel 3 meters upstream, and 50 seconds to travel the same distance downstream, what is the name of the protagonist?",
+    "AnimeAns":"Takaki Tono"},
+    {"blockNo":"C",
+    "prevHash":"37ecf1e8900237d6e61559e50fa9b28ac2ad5bb5c48541736aace70cf58121f3",
+    "hash":"192dbb086e2ecee07e3abf2a1e72aa75654e87210f4808f235f79761ef018b02",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"E",
+    "prevHash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "hash":"d6fa252888b46733abb7e835530616e3975e1aa3c251fa2ae34034069e0897d6",
+    "LocationQues":"This person is in a club that is mostly seen doing an activity,\nwhere does such activity usually occours?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I run an agency for a living which deals with the dead and\nMy super killer technique (Hissatsu) involves throwing salt.",
+    "AnimeAns":"Arataka Reigen"},
+    {"blockNo":"D",
+    "prevHash":"d6fa252888b46733abb7e835530616e3975e1aa3c251fa2ae34034069e0897d6",
+    "hash":"e5345b82a101ff939632712c88679bd699858961da27f18306f3d1d6131ad402",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"C",
+    "prevHash":"e5345b82a101ff939632712c88679bd699858961da27f18306f3d1d6131ad402",
+    "hash":"c22c66a2f3f0e4e7aaa34b644cc1dbd0a9ad1bfa1a31660bfa470a6588fc3c0e",
+    "LocationQues":"*Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I am a huge knife,\nBut I don't cut food or flesh\nI can change to a black katana\nIncreasing my user's strength\nWho is my wielder?",
+    "AnimeAns":"Kurosaki Ichigo"},
+    {"blockNo":"A",
+    "prevHash":"c22c66a2f3f0e4e7aaa34b644cc1dbd0a9ad1bfa1a31660bfa470a6588fc3c0e",
+    "hash":"29835c675a6d74302ab91fd7b954acd85739b7e2eba0493558f93dd662a7b5e6",
+    "LocationQues":"There was a scene in this anime where a ball was sent with supersonic speed.\nThe location is the type of game they were playing",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Get a star when you perform your best; you'll get this, however, when you try out a jest",
+    "AnimeAns":"Tonitrus Bolt"},
+    {"blockNo":"B",
+    "prevHash":"29835c675a6d74302ab91fd7b954acd85739b7e2eba0493558f93dd662a7b5e6",
+    "hash":"6e7250c1f5600c741ffd3bca0a5b037bb5bbe240659aab6c833050542080288e",
+    "LocationQues":"For more than two generations, I was trapped over here",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"You were expecting a question but it was me.",
+    "AnimeAns":"Dio Brando"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"C",
+    "prevHash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "hash":"becf939f051c2951c44fe7cc3a2e7d0027103fe71aee60f600e0af85f31c05b3",
+    "LocationQues":"+Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I love my sister. Seeing her portrayals as I photograph her, I am eager to do something like that. But I am not confident I will be able to do something like that, considering my size.",
+    "AnimeAns":"Shinju Inui"},
+    {"blockNo":"A",
+    "prevHash":"becf939f051c2951c44fe7cc3a2e7d0027103fe71aee60f600e0af85f31c05b3",
+    "hash":"5c32b74cffc157330749a12614ea19d5be4fd99d9492317b79dbeab81333de21",
+    "LocationQues":"Those who I seek vengeance against, they share a tattoo of this. As they work their magic, they can produce something similar to what is used in this place.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Sole survivor of eye-hunted clan, seeking revenge with glowing eyes,Wearing dress named after my people, untold story it implies.Who am I?",
+    "AnimeAns":"Kurapika"},
+    {"blockNo":"D",
+    "prevHash":"5c32b74cffc157330749a12614ea19d5be4fd99d9492317b79dbeab81333de21",
+    "hash":"ba0de4d1ec26df52b7c4ae746c21ed21f8abf6b4bf03fae58e8f1ad35e386b0e",
+    "LocationQues":"-A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Chess-loving boy becomes dictator with mind-control powers, plus robots. Who is the sibling of this boy who he got killed when he lost control of his powers?",
+    "AnimeAns":"Euphemia li Britannia"},
+    {"blockNo":"B",
+    "prevHash":"ba0de4d1ec26df52b7c4ae746c21ed21f8abf6b4bf03fae58e8f1ad35e386b0e",
+    "hash":"c0f2f3806b1e87f95746fb6ea1cbf314dad7fb7df23785728ea1112a852ea152",
+    "LocationQues":"All that talk about upstream and downstream is reminding me of this place",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"If an insect takes 75 seconds to travel 3 meters upstream, and 50 seconds to travel the same distance downstream, what is the name of the protagonist?",
+    "AnimeAns":"Takaki Tono"},
+    {"blockNo":"E",
+    "prevHash":"c0f2f3806b1e87f95746fb6ea1cbf314dad7fb7df23785728ea1112a852ea152",
+    "hash":"825fb57fff73d917fcae0cb61e8efea202650c27d78285680f098a1498f59d1f",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"B",
+    "prevHash":"TreasureHunt",
+    "hash":"4c6b085288f72a820ea8ec4f5051aadb8d3bc561b2b1d2ba504c1f5ac8789237",
+    "LocationQues":"My master likes spending time here with his female subordinates",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"37 years and a meaningless death,\nThe world gave me to him at his final breath.\nWhen he finally became a demon lord,\nI evolved, my powers now close to that of a god",
+    "AnimeAns":"Raphael"},
+    {"blockNo":"D",
+    "prevHash":"4c6b085288f72a820ea8ec4f5051aadb8d3bc561b2b1d2ba504c1f5ac8789237",
+    "hash":"ae21ffca8718dc1414b8ae47c594a1e308b8d5cadca21f0c1eb64eca7f163961",
+    "LocationQues":"|A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A fiery heart, a fierce might,\nHe'd strike foes down with deadly light,\nHis weapon lit, the target in sight,\nA hero of the Brotherhood, his might.",
+    "AnimeAns":"Roy Mustang"},
+    {"blockNo":"F",
+    "prevHash":"ae21ffca8718dc1414b8ae47c594a1e308b8d5cadca21f0c1eb64eca7f163961",
+    "hash":"07dccbfb4797b95e398b0cbcf544629a6295d825f59f12a3231ee3ecbd91eca2",
+    "LocationQues":"I know where I need to go, if I need to see you",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"If I'd been born ten years earlier, and met her ten years earlier, I'd probably have been head over heels for her.",
+    "AnimeAns":"Shizuka Hiratsuka"},
+    {"blockNo":"C",
+    "prevHash":"07dccbfb4797b95e398b0cbcf544629a6295d825f59f12a3231ee3ecbd91eca2",
+    "hash":"4e0262843cb4de74a0740e7d04b7e9f2a0d8c5d7aa56c6515c06ab235fd97d1b",
+    "LocationQues":"*Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I am a huge knife,\nBut I don't cut food or flesh\nI can change to a black katana\nIncreasing my user's strength\nWho is my wielder?",
+    "AnimeAns":"Kurosaki Ichigo"},
+    {"blockNo":"A",
+    "prevHash":"4e0262843cb4de74a0740e7d04b7e9f2a0d8c5d7aa56c6515c06ab235fd97d1b",
+    "hash":"316c81139c26429f14a9f7344030a9879fa2cd2815cd2049ebbf06abdf886998",
+    "LocationQues":"There was a scene in this anime where a ball was sent with supersonic speed.\nThe location is the type of game they were playing",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Get a star when you perform your best; you'll get this, however, when you try out a jest",
+    "AnimeAns":"Tonitrus Bolt"},
+    {"blockNo":"E",
+    "prevHash":"316c81139c26429f14a9f7344030a9879fa2cd2815cd2049ebbf06abdf886998",
+    "hash":"3515fa6edbd2cef8a27a96d8425c414dcb52d245fcddae271c58f6edcfb864b7",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"F",
+    "prevHash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "hash":"8d4239f661ecf18ac68b6f34a432fe28995d6364b7f00e2a9e6b0438b4ed68af",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"B",
+    "prevHash":"8d4239f661ecf18ac68b6f34a432fe28995d6364b7f00e2a9e6b0438b4ed68af",
+    "hash":"38f4380ef1b64270807a036d5e076ca83f85c6e0c37b26fc484cef59edead64d",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"D",
+    "prevHash":"38f4380ef1b64270807a036d5e076ca83f85c6e0c37b26fc484cef59edead64d",
+    "hash":"a97f333593fb110cf6333b0ea686fe8bab6080d2e9e6f2775174cc22e4731786",
+    "LocationQues":"-A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Chess-loving boy becomes dictator with mind-control powers, plus robots. Who is the sibling of this boy who he got killed when he lost control of his powers?",
+    "AnimeAns":"Euphemia li Britannia"},
+    {"blockNo":"C",
+    "prevHash":"a97f333593fb110cf6333b0ea686fe8bab6080d2e9e6f2775174cc22e4731786",
+    "hash":"aa1bc71ab057c4cb9166900e15b881cde70be95b184e2fe1d4d8aaf7ac514e9d",
+    "LocationQues":"|Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I knew your boyfriend better than you until the clay came into the picture",
+    "AnimeAns":"Koichi Shindo"},
+    {"blockNo":"E",
+    "prevHash":"aa1bc71ab057c4cb9166900e15b881cde70be95b184e2fe1d4d8aaf7ac514e9d",
+    "hash":"74757c92c84963147f459830ccd5b96a86013c3dc30d4aa7368b1df0d2ef4b83",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"C",
+    "prevHash":"TreasureHunt",
+    "hash":"264ce6c7958388b48e3accc45c1a2e9d31e06a7ff62b242929ba935750694226",
+    "LocationQues":"Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"Though I am a demon, I cannot ride\nThe bicorn's back, it's too small for my pride.\nInstead, I serve a lich as a general, you see,\nLeading an army of undead for eternity.",
+    "AnimeAns":"Albedo"},
+    {"blockNo":"A",
+    "prevHash":"264ce6c7958388b48e3accc45c1a2e9d31e06a7ff62b242929ba935750694226",
+    "hash":"a8b4c52c863ca87f4a51bb1aca06f22b18c2b1de8c6c7109d0bc59d6cb5b0e68",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"D",
+    "prevHash":"a8b4c52c863ca87f4a51bb1aca06f22b18c2b1de8c6c7109d0bc59d6cb5b0e68",
+    "hash":"99d877ae03f84fb5c448578cb3290c4f69bdc367d03767567736090c08c17c3f",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"E",
+    "prevHash":"99d877ae03f84fb5c448578cb3290c4f69bdc367d03767567736090c08c17c3f",
+    "hash":"645bff26543d93d3619f1d489c1bb0ed5cb0005158cfcc682442bee9fb861433",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here ",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every day, I enter the hallowed halls of this esteemed institution, where the very air seems to hum with an intensity of purpose. The weight of its legacy is palpable, and with each passing moment, I am reminded of the honor - and burden - of being a part of its student body. But amidst the endless competition and striving for excellence, I find myself drawn to another battle - the one for the heart of the one I love, whose eyes shine just as brightly as the hallways of this place.",
+    "AnimeAns":"Miyuki Shirogane"},
+    {"blockNo":"F",
+    "prevHash":"645bff26543d93d3619f1d489c1bb0ed5cb0005158cfcc682442bee9fb861433",
+    "hash":"e2aa5cc507116e4b659a7c4ef8c4ba779e768cc466d005bdc4f783d5e65fef38",
+    "LocationQues":"Where would you send a person like this?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"Sniping like a pro in a game, only to get scared by a finger gun",
+    "AnimeAns":"Asada Shino"},
+    {"blockNo":"B",
+    "prevHash":"e2aa5cc507116e4b659a7c4ef8c4ba779e768cc466d005bdc4f783d5e65fef38",
+    "hash":"984eb00f6d1ba974d029e3fc3d80596c2d70f2c4a3c9c418d27b47ccb31a900d",
+    "LocationQues":"For more than two generations, I was trapped over here",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"You were expecting a question but it was me.",
+    "AnimeAns":"Dio Brando"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"F",
+    "prevHash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "hash":"8d4239f661ecf18ac68b6f34a432fe28995d6364b7f00e2a9e6b0438b4ed68af",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"E",
+    "prevHash":"8d4239f661ecf18ac68b6f34a432fe28995d6364b7f00e2a9e6b0438b4ed68af",
+    "hash":"b2ca7e467f774aa9d53db31644e2fd75ef6b497b915423b7f534b0c4ab579d1c",
+    "LocationQues":"Which place can he release his power while causing the least collateral damage",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"His power is over 9000",
+    "AnimeAns":"Goku"},
+    {"blockNo":"B",
+    "prevHash":"b2ca7e467f774aa9d53db31644e2fd75ef6b497b915423b7f534b0c4ab579d1c",
+    "hash":"88490351cd1f0a38b6ebeef37ef39aa5e8d7455dfd6d32f9b72e339281255f78",
+    "LocationQues":"I think the question itself points you to the location",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I was transported to another world against my will.\nI just want to drink and sleep throught this ride,\nIn battles, my powers can turn the tide.\nI think.....\nWho am I?",
+    "AnimeAns":"Aqua"},
+    {"blockNo":"D",
+    "prevHash":"88490351cd1f0a38b6ebeef37ef39aa5e8d7455dfd6d32f9b72e339281255f78",
+    "hash":"54072dc2a685b2e2c726861d6a33a2f389c39051313f64038484a8b2c342a749",
+    "LocationQues":".A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"You cant beat me because my right hand won't let you reach me",
+    "AnimeAns":"Shinichi Izumi"},
+    {"blockNo":"C",
+    "prevHash":"54072dc2a685b2e2c726861d6a33a2f389c39051313f64038484a8b2c342a749",
+    "hash":"5120dd91f37481aa409746f597393a83e1203a57aa2a0ec616c6e7b415415f63",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"B",
+    "prevHash":"TreasureHunt",
+    "hash":"4c6b085288f72a820ea8ec4f5051aadb8d3bc561b2b1d2ba504c1f5ac8789237",
+    "LocationQues":"My master likes spending time here with his female subordinates",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"37 years and a meaningless death,\nThe world gave me to him at his final breath.\nWhen he finally became a demon lord,\nI evolved, my powers now close to that of a god",
+    "AnimeAns":"Raphael"},
+    {"blockNo":"F",
+    "prevHash":"4c6b085288f72a820ea8ec4f5051aadb8d3bc561b2b1d2ba504c1f5ac8789237",
+    "hash":"7ed7a648d92105a1469b39c091e0f0a1063ed77477595efe0fc571443bc150f9",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"D",
+    "prevHash":"7ed7a648d92105a1469b39c091e0f0a1063ed77477595efe0fc571443bc150f9",
+    "hash":"60b60adc7f18eef83edab600489eee646c804cdca38ad9c729dd6c4d616a385d",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"C",
+    "prevHash":"60b60adc7f18eef83edab600489eee646c804cdca38ad9c729dd6c4d616a385d",
+    "hash":"7a589228e7cecf1b9f6d709a25ee9130506156a15738eea9d63fe7abe3dc782e",
+    "LocationQues":"*Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I am a huge knife,\nBut I don't cut food or flesh\nI can change to a black katana\nIncreasing my user's strength\nWho is my wielder?",
+    "AnimeAns":"Kurosaki Ichigo"},
+    {"blockNo":"E",
+    "prevHash":"7a589228e7cecf1b9f6d709a25ee9130506156a15738eea9d63fe7abe3dc782e",
+    "hash":"7a54f463936bd086d119b58453c92cfd611ca7fda2d95ea7b17b50f1b4af801d",
+    "LocationQues":"This is the place where I showcase my true skill openly for the first time",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I am a student in Class D,\nWith intelligence you cannot see.\nMy eyes are always closed,\nBut in the shadows, I am composed.",
+    "AnimeAns":"Kiyotaka Ayanokoji"},
+    {"blockNo":"A",
+    "prevHash":"7a54f463936bd086d119b58453c92cfd611ca7fda2d95ea7b17b50f1b4af801d",
+    "hash":"7eb262082ae0d82d636a7ad47bc72b61ee0b8ab528cea8e3ed8cd74121ebca40",
+    "LocationQues":"|With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"I am a Tsundere loli whose name is also an animal.",
+    "AnimeAns":"Taiga Aisaka"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"D",
+    "prevHash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "hash":"bd4832be80848d6150c5d78be0ce81f557a88fb21e26dd1227f49e5e02b6f451",
+    "LocationQues":"|A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A fiery heart, a fierce might,\nHe'd strike foes down with deadly light,\nHis weapon lit, the target in sight,\nA hero of the Brotherhood, his might.",
+    "AnimeAns":"Roy Mustang"},
+    {"blockNo":"C",
+    "prevHash":"bd4832be80848d6150c5d78be0ce81f557a88fb21e26dd1227f49e5e02b6f451",
+    "hash":"32aeaec5fabef614666acb9d8609a779bd5a8c93ee583c8ebb27b9b45dda342c",
+    "LocationQues":".Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"As a flower, I don't know my own purpose. Though I write letters for others, I feel incomplete. I search for my own meaning, my own place in this world. I'll continue to grow and bloom, hoping to discover my reason for being.",
+    "AnimeAns":"Violet Evergarden"},
+    {"blockNo":"B",
+    "prevHash":"32aeaec5fabef614666acb9d8609a779bd5a8c93ee583c8ebb27b9b45dda342c",
+    "hash":"3a3f74c6ff06e6f2c6503bca5e308f63d12662a556000a961d1c5fb8b5569da0",
+    "LocationQues":"I think the question itself points you to the location",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I was transported to another world against my will.\nI just want to drink and sleep throught this ride,\nIn battles, my powers can turn the tide.\nI think.....\nWho am I?",
+    "AnimeAns":"Aqua"},
+    {"blockNo":"E",
+    "prevHash":"3a3f74c6ff06e6f2c6503bca5e308f63d12662a556000a961d1c5fb8b5569da0",
+    "hash":"55368772616ac9724e3865c4f922257f2ea6adf4d8d16ec715c910f7a341c458",
+    "LocationQues":"This is the place where I showcase my true skill openly for the first time",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I am a student in Class D,\nWith intelligence you cannot see.\nMy eyes are always closed,\nBut in the shadows, I am composed.",
+    "AnimeAns":"Kiyotaka Ayanokoji"},
+    {"blockNo":"F",
+    "prevHash":"55368772616ac9724e3865c4f922257f2ea6adf4d8d16ec715c910f7a341c458",
+    "hash":"c9e4d0c1e4ab723f4d297033999ca2288796892017858eeff4ae27f3d31ce3d9",
+    "LocationQues":"As I think of my past, where should I go, haste?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a musical prodigy, with fingers so swift,\nPlaying the piano is my only true gift,\nHaunted by memories that I cannot forget,\nBut when I play music, my heart starts to reset.\nWho am I?",
+    "AnimeAns":"Kousei Arima"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"B",
+    "prevHash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "hash":"c6e8ca9df25f5cb9e4aa9e89edd6441ff14ab52ff7f7d5a40f23a32fc5b66b4a",
+    "LocationQues":"When my battles are won and my crew's duties are done, I'll plunge in the water, and soak up the sun.",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I sail a ship named after a famous whale",
+    "AnimeAns":"Whitebeard"},
+    {"blockNo":"E",
+    "prevHash":"c6e8ca9df25f5cb9e4aa9e89edd6441ff14ab52ff7f7d5a40f23a32fc5b66b4a",
+    "hash":"f17240fae07affa4d30ce258cde7039fbcf8841f1976fb6916ac753526946568",
+    "LocationQues":"Which place can he release his power while causing the least collateral damage",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"His power is over 9000",
+    "AnimeAns":"Goku"},
+    {"blockNo":"D",
+    "prevHash":"f17240fae07affa4d30ce258cde7039fbcf8841f1976fb6916ac753526946568",
+    "hash":"a3ff637f96be0907279cf113d5d3c64467c1ea375492e485164201ac6137c44b",
+    "LocationQues":"-A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Chess-loving boy becomes dictator with mind-control powers, plus robots. Who is the sibling of this boy who he got killed when he lost control of his powers?",
+    "AnimeAns":"Euphemia li Britannia"},
+    {"blockNo":"C",
+    "prevHash":"a3ff637f96be0907279cf113d5d3c64467c1ea375492e485164201ac6137c44b",
+    "hash":"b61e5950e788d4a2f3c4c4245f9a80eb020f9a622662e0799b5190ba8e8ba63a",
+    "LocationQues":"|Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I knew your boyfriend better than you until the clay came into the picture",
+    "AnimeAns":"Koichi Shindo"},
+    {"blockNo":"A",
+    "prevHash":"b61e5950e788d4a2f3c4c4245f9a80eb020f9a622662e0799b5190ba8e8ba63a",
+    "hash":"72ddcad2dac0f05de3726d89f7e3c2de8d13651bfe39c0ae5111964696386c03",
+    "LocationQues":"|With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"I am a Tsundere loli whose name is also an animal.",
+    "AnimeAns":"Taiga Aisaka"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"A",
+    "prevHash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "hash":"4a192e02a77b40c4dade80566769dbf19a631d88c275b7d084b5cec7bcedf129",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"D",
+    "prevHash":"4a192e02a77b40c4dade80566769dbf19a631d88c275b7d084b5cec7bcedf129",
+    "hash":"c568042ab027d5bcc4f42a54f945284b62d60369e11cf901bb92fe74c087a5a4",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"B",
+    "prevHash":"c568042ab027d5bcc4f42a54f945284b62d60369e11cf901bb92fe74c087a5a4",
+    "hash":"1345449ce925624a1a1a0dec21f96c0d64a87d30529b4fd7feeac19d29591533",
+    "LocationQues":"I think the question itself points you to the location",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I was transported to another world against my will.\nI just want to drink and sleep throught this ride,\nIn battles, my powers can turn the tide.\nI think.....\nWho am I?",
+    "AnimeAns":"Aqua"},
+    {"blockNo":"E",
+    "prevHash":"1345449ce925624a1a1a0dec21f96c0d64a87d30529b4fd7feeac19d29591533",
+    "hash":"d8977a94fcf5a7de688fd9231caec1c9fcb2418320cd41e5b6f4b95858a53251",
+    "LocationQues":"This is the place where I showcase my true skill openly for the first time",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I am a student in Class D,\nWith intelligence you cannot see.\nMy eyes are always closed,\nBut in the shadows, I am composed.",
+    "AnimeAns":"Kiyotaka Ayanokoji"},
+    {"blockNo":"C",
+    "prevHash":"d8977a94fcf5a7de688fd9231caec1c9fcb2418320cd41e5b6f4b95858a53251",
+    "hash":"84b5aca07893ab08252987caeaa97f90f9a726a0ca319ad47c243ccd1f6ee9b0",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"E",
+    "prevHash":"TreasureHunt",
+    "hash":"17c2e21ebc38f2c8bf966136ae9e5ba30f3139c10ac18123be3e6e24564d2159",
+    "LocationQues":"Do you remember where our fight happened after we discussed this?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"You might like a girl with an unshakable personality, which doesn't make you suitable to be my friend",
+    "AnimeAns":"Aoi Todo"},
+    {"blockNo":"F",
+    "prevHash":"17c2e21ebc38f2c8bf966136ae9e5ba30f3139c10ac18123be3e6e24564d2159",
+    "hash":"530a41aada262a0a79c66392c1b1e669a713ab15e6ae4db0fc6b09175727aabd",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"B",
+    "prevHash":"530a41aada262a0a79c66392c1b1e669a713ab15e6ae4db0fc6b09175727aabd",
+    "hash":"b5d36a7bfad930b5bacc6f716c44b629b62b4bc8328e28ebeace1b5947af3782",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"C",
+    "prevHash":"b5d36a7bfad930b5bacc6f716c44b629b62b4bc8328e28ebeace1b5947af3782",
+    "hash":"1a159210e2bb1fb1e38cbf477388f4df1987fd9751c0a4dcefa489444e260e19",
+    "LocationQues":"*Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I am a huge knife,\nBut I don't cut food or flesh\nI can change to a black katana\nIncreasing my user's strength\nWho is my wielder?",
+    "AnimeAns":"Kurosaki Ichigo"},
+    {"blockNo":"A",
+    "prevHash":"1a159210e2bb1fb1e38cbf477388f4df1987fd9751c0a4dcefa489444e260e19",
+    "hash":"eb893080b574344e223f855f27a605c26bbe476992a686526601dfb47364d7f8",
+    "LocationQues":"There was a scene in this anime where a ball was sent with supersonic speed.\nThe location is the type of game they were playing",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Get a star when you perform your best; you'll get this, however, when you try out a jest",
+    "AnimeAns":"Tonitrus Bolt"},
+    {"blockNo":"D",
+    "prevHash":"eb893080b574344e223f855f27a605c26bbe476992a686526601dfb47364d7f8",
+    "hash":"bfdcb6f71beef0243c81ee134c8543cdb4fcc4fef5504aaa039794aaf1fd9e57",
+    "LocationQues":"*A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A sense of smell which rivals the gods', I smell this as I hear other people's lauds",
+    "AnimeAns":"Cinnamon"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"D",
+    "prevHash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "hash":"bd4832be80848d6150c5d78be0ce81f557a88fb21e26dd1227f49e5e02b6f451",
+    "LocationQues":"|A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A fiery heart, a fierce might,\nHe'd strike foes down with deadly light,\nHis weapon lit, the target in sight,\nA hero of the Brotherhood, his might.",
+    "AnimeAns":"Roy Mustang"},
+    {"blockNo":"B",
+    "prevHash":"bd4832be80848d6150c5d78be0ce81f557a88fb21e26dd1227f49e5e02b6f451",
+    "hash":"27778bbb60a7e26f34de9f65b1e9207cec33d270ac6bf7f727339d48c74debe5",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"E",
+    "prevHash":"27778bbb60a7e26f34de9f65b1e9207cec33d270ac6bf7f727339d48c74debe5",
+    "hash":"eeba15ad1f05448041a636086f6fa3e16b7b30b4c1c0787101fc2c0b4b3efd49",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here ",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every day, I enter the hallowed halls of this esteemed institution, where the very air seems to hum with an intensity of purpose. The weight of its legacy is palpable, and with each passing moment, I am reminded of the honor - and burden - of being a part of its student body. But amidst the endless competition and striving for excellence, I find myself drawn to another battle - the one for the heart of the one I love, whose eyes shine just as brightly as the hallways of this place.",
+    "AnimeAns":"Miyuki Shirogane"},
+    {"blockNo":"F",
+    "prevHash":"eeba15ad1f05448041a636086f6fa3e16b7b30b4c1c0787101fc2c0b4b3efd49",
+    "hash":"0fb77af7061222559b501fced2285f326218455f4285d661f203867137d23a06",
+    "LocationQues":"Where would you send a person like this?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"Sniping like a pro in a game, only to get scared by a finger gun",
+    "AnimeAns":"Asada Shino"},
+    {"blockNo":"C",
+    "prevHash":"0fb77af7061222559b501fced2285f326218455f4285d661f203867137d23a06",
+    "hash":"7b8929044b1e9495c10af201e933466d9a093b6c8715e45dfa8302447e304c3c",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"F",
+    "prevHash":"TreasureHunt",
+    "hash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "LocationQues":"Considering what happens around me, I am surprised I haven't been sent to this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a hero with a laid-back nature,\nHelping others through adolescent trouble, my adventure.\nMy fetishes are odd, but make me unique,\nStraightforward yet complex, it's hard to critique.",
+    "AnimeAns":"Sakuta Azusagawa"},
+    {"blockNo":"D",
+    "prevHash":"c1648967e27604c3c8c42304c8ff4a96d116bd14618814cfb47f7301816ccad2",
+    "hash":"6e220929d82a4deeed5d5b60ed570f9d31d2c6c5bc1c27354d00a843a193c357",
+    "LocationQues":"|A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"A fiery heart, a fierce might,\nHe'd strike foes down with deadly light,\nHis weapon lit, the target in sight,\nA hero of the Brotherhood, his might.",
+    "AnimeAns":"Roy Mustang"},
+    {"blockNo":"E",
+    "prevHash":"6e220929d82a4deeed5d5b60ed570f9d31d2c6c5bc1c27354d00a843a193c357",
+    "hash":"14f342baf65f15a0d250ed4c12cdf157caf8a471392de7f3daa040965a002927",
+    "LocationQues":"Which place can he release his power while causing the least collateral damage",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"His power is over 9000",
+    "AnimeAns":"Goku"},
+    {"blockNo":"A",
+    "prevHash":"14f342baf65f15a0d250ed4c12cdf157caf8a471392de7f3daa040965a002927",
+    "hash":"ae2c5c1ab73cfe9817b316f2cd31e04d427e2e2e4dd546aaea14fc8845d0c200",
+    "LocationQues":"-With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"From the land where the sun first appears,\nComes a knight whose magic is strong and clear.\nThough his past is shrouded in shadow and fear,\nHe fights for what's right, and brings hope near.",
+    "AnimeAns":"Yami Sukihiro"},
+    {"blockNo":"B",
+    "prevHash":"ae2c5c1ab73cfe9817b316f2cd31e04d427e2e2e4dd546aaea14fc8845d0c200",
+    "hash":"862e25034eba660cc31629861b6be2891e9218efa3f97951aef87d27341146cd",
+    "LocationQues":"All that talk about upstream and downstream is reminding me of this place",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"If an insect takes 75 seconds to travel 3 meters upstream, and 50 seconds to travel the same distance downstream, what is the name of the protagonist?",
+    "AnimeAns":"Takaki Tono"},
+    {"blockNo":"C",
+    "prevHash":"862e25034eba660cc31629861b6be2891e9218efa3f97951aef87d27341146cd",
+    "hash":"05f856d54757a5690a9a0e34eb328048e9800ba8b60982879a8a4bcbd2039206",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"A",
+    "prevHash":"TreasureHunt",
+    "hash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "LocationQues":"Before the wall mentioned here, there is another wall which is present. Where else can I find this wall?",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"A tall, tall wall looms over me. What is the view on the other side? What does it look like? The view from the top.",
+    "AnimeAns":"Shoyo Hinata"},
+    {"blockNo":"C",
+    "prevHash":"2f91cb20ba433496b46f2bec4b0228e5e58250d5d0aa2b9bc2500a9c40ad7eb6",
+    "hash":"e5a5799d9905b3df767131e0120bf744a35571b3435d668d2b31419c3f138c1a",
+    "LocationQues":"+Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I love my sister. Seeing her portrayals as I photograph her, I am eager to do something like that. But I am not confident I will be able to do something like that, considering my size.",
+    "AnimeAns":"Shinju Inui"},
+    {"blockNo":"D",
+    "prevHash":"e5a5799d9905b3df767131e0120bf744a35571b3435d668d2b31419c3f138c1a",
+    "hash":"ecde4af90d212c2db4e90de640c742eeb57c0b738839c9c97ebc6a3e02596282",
+    "LocationQues":"A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"In this anime, a love story is told,\nWhere hearts are entwined and never fold,\nA tale so sweet, it's hard to believe,\nWholesome and warm, it's sure to relieve.\nTheir love shines bright like stars above,\nWith a bond that never seems to falter,\nIt's an anime that's filled with love,\nA sweet story that'll make your heart alter.",
+    "AnimeAns":"Tonikawa"},
+    {"blockNo":"B",
+    "prevHash":"ecde4af90d212c2db4e90de640c742eeb57c0b738839c9c97ebc6a3e02596282",
+    "hash":"b49ab345f4e75868486c0530974adf4b3f9108500e350731560333d96da58373",
+    "LocationQues":"I think the question itself points you to the location",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I was transported to another world against my will.\nI just want to drink and sleep throught this ride,\nIn battles, my powers can turn the tide.\nI think.....\nWho am I?",
+    "AnimeAns":"Aqua"},
+    {"blockNo":"F",
+    "prevHash":"b49ab345f4e75868486c0530974adf4b3f9108500e350731560333d96da58373",
+    "hash":"07756fa62a037c4a6985d5b109d2cbd1e812eb82f75ca2465f9e92788071bf29",
+    "LocationQues":"Where would you send a person like this?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"Sniping like a pro in a game, only to get scared by a finger gun",
+    "AnimeAns":"Asada Shino"},
+    {"blockNo":"E",
+    "prevHash":"07756fa62a037c4a6985d5b109d2cbd1e812eb82f75ca2465f9e92788071bf29",
+    "hash":"3554825a728f8c4bf5b447d8fea4f000462566ad77d8bd4ba380089fc6899fc2",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"C",
+    "prevHash":"TreasureHunt",
+    "hash":"264ce6c7958388b48e3accc45c1a2e9d31e06a7ff62b242929ba935750694226",
+    "LocationQues":"Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"Though I am a demon, I cannot ride\nThe bicorn's back, it's too small for my pride.\nInstead, I serve a lich as a general, you see,\nLeading an army of undead for eternity.",
+    "AnimeAns":"Albedo"},
+    {"blockNo":"F",
+    "prevHash":"264ce6c7958388b48e3accc45c1a2e9d31e06a7ff62b242929ba935750694226",
+    "hash":"d3548117b0449df932fc4e55a7281b8c8e3db624c8da3eefa4c7dac5ca4035fd",
+    "LocationQues":"This person really needs to visit this place.",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"There is only one thing that is truly most precious to you. You must get rid of everything but that, and think of nothing but protecting that one most precious thing. By doing that .... You can become like me.",
+    "AnimeAns":"Roswaal L Mathers"},
+    {"blockNo":"A",
+    "prevHash":"d3548117b0449df932fc4e55a7281b8c8e3db624c8da3eefa4c7dac5ca4035fd",
+    "hash":"ace9acaaa01d35e753072ff2531133b9f6cc86b2813ef0c010a68cd65cdfc414",
+    "LocationQues":"Those who I seek vengeance against, they share a tattoo of this. As they work their magic, they can produce something similar to what is used in this place.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Sole survivor of eye-hunted clan, seeking revenge with glowing eyes,Wearing dress named after my people, untold story it implies.Who am I?",
+    "AnimeAns":"Kurapika"},
+    {"blockNo":"D",
+    "prevHash":"ace9acaaa01d35e753072ff2531133b9f6cc86b2813ef0c010a68cd65cdfc414",
+    "hash":"9cd155f2b57c20df8454b5ef282fc94544d024f91cbdcf374d8045ba31760cfc",
+    "LocationQues":"-A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Chess-loving boy becomes dictator with mind-control powers, plus robots. Who is the sibling of this boy who he got killed when he lost control of his powers?",
+    "AnimeAns":"Euphemia li Britannia"},
+    {"blockNo":"E",
+    "prevHash":"9cd155f2b57c20df8454b5ef282fc94544d024f91cbdcf374d8045ba31760cfc",
+    "hash":"0dcb75a8b3e1ba661f2bd47efbe786b1ef6da6e8fe9f0020aa1af4221e9ef9f8",
+    "LocationQues":"This is the place where I showcase my true skill openly for the first time",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"I am a student in Class D,\nWith intelligence you cannot see.\nMy eyes are always closed,\nBut in the shadows, I am composed.",
+    "AnimeAns":"Kiyotaka Ayanokoji"},
+    {"blockNo":"B",
+    "prevHash":"0dcb75a8b3e1ba661f2bd47efbe786b1ef6da6e8fe9f0020aa1af4221e9ef9f8",
+    "hash":"c0f81bb6d556d59ef76d5fd90d139ca63d412556d7e951b2083029ff9063e100",
+    "LocationQues":"For more than two generations, I was trapped over here",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"You were expecting a question but it was me.",
+    "AnimeAns":"Dio Brando"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"E",
+    "prevHash":"TreasureHunt",
+    "hash":"17c2e21ebc38f2c8bf966136ae9e5ba30f3139c10ac18123be3e6e24564d2159",
+    "LocationQues":"Do you remember where our fight happened after we discussed this?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"You might like a girl with an unshakable personality, which doesn't make you suitable to be my friend",
+    "AnimeAns":"Aoi Todo"},
+    {"blockNo":"C",
+    "prevHash":"17c2e21ebc38f2c8bf966136ae9e5ba30f3139c10ac18123be3e6e24564d2159",
+    "hash":"edfeb67b863cfc722e53f8d17c95ad48354f60b68f5e99bd0737834d2d306c1c",
+    "LocationQues":"+Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I love my sister. Seeing her portrayals as I photograph her, I am eager to do something like that. But I am not confident I will be able to do something like that, considering my size.",
+    "AnimeAns":"Shinju Inui"},
+    {"blockNo":"A",
+    "prevHash":"edfeb67b863cfc722e53f8d17c95ad48354f60b68f5e99bd0737834d2d306c1c",
+    "hash":"b8da6cd34d9ef1e47906dd279445e79e7e24c6deaaadbe0e8a09a4ec130bee9e",
+    "LocationQues":"Those who I seek vengeance against, they share a tattoo of this. As they work their magic, they can produce something similar to what is used in this place.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"Sole survivor of eye-hunted clan, seeking revenge with glowing eyes,Wearing dress named after my people, untold story it implies.Who am I?",
+    "AnimeAns":"Kurapika"},
+    {"blockNo":"B",
+    "prevHash":"b8da6cd34d9ef1e47906dd279445e79e7e24c6deaaadbe0e8a09a4ec130bee9e",
+    "hash":"d05b356effdbd933750a786f229d79e96b12980202d21d40b47af368bc156291",
+    "LocationQues":"I think the question itself points you to the location",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"I was transported to another world against my will.\nI just want to drink and sleep throught this ride,\nIn battles, my powers can turn the tide.\nI think.....\nWho am I?",
+    "AnimeAns":"Aqua"},
+    {"blockNo":"D",
+    "prevHash":"d05b356effdbd933750a786f229d79e96b12980202d21d40b47af368bc156291",
+    "hash":"43c09324feaf5cbf0075b3b85df6e2c0ab50ae5aabbe216c5411a53f5f7c1fbe",
+    "LocationQues":".A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"You cant beat me because my right hand won't let you reach me",
+    "AnimeAns":"Shinichi Izumi"},
+    {"blockNo":"F",
+    "prevHash":"43c09324feaf5cbf0075b3b85df6e2c0ab50ae5aabbe216c5411a53f5f7c1fbe",
+    "hash":"e059eb9c670f880111297fc32a6cf0d9c09cfabbdcd772216ac2cb5f41844957",
+    "LocationQues":"As I think of my past, where should I go, haste?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I'm a musical prodigy, with fingers so swift,\nPlaying the piano is my only true gift,\nHaunted by memories that I cannot forget,\nBut when I play music, my heart starts to reset.\nWho am I?",
+    "AnimeAns":"Kousei Arima"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"D",
+    "prevHash":"TreasureHunt",
+    "hash":"50ac57b366c0a4cdca2307e61ce158de84533a47f378607cdd0029be2e1ae465",
+    "LocationQues":"+A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"Every poison has a different effect on me. I don't die though; they sometimes give me wings or horns even make me blank",
+    "AnimeAns":"Koro Sensei"},
+    {"blockNo":"A",
+    "prevHash":"50ac57b366c0a4cdca2307e61ce158de84533a47f378607cdd0029be2e1ae465",
+    "hash":"69a337e83e0591682d5d8cb863ba5817ed89a950ceb7705d43d557cbcb1b40b4",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"B",
+    "prevHash":"69a337e83e0591682d5d8cb863ba5817ed89a950ceb7705d43d557cbcb1b40b4",
+    "hash":"b406078e0a173fb2e230fb46dd7535c40582d8a6cae7dad4de4570f083d7a181",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"C",
+    "prevHash":"b406078e0a173fb2e230fb46dd7535c40582d8a6cae7dad4de4570f083d7a181",
+    "hash":"a9f57a5ad664b84f66106e37aef0572669a8eca5fd371d4aaf5a089aba5ac2bc",
+    "LocationQues":"*Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"I am a huge knife,\nBut I don't cut food or flesh\nI can change to a black katana\nIncreasing my user's strength\nWho is my wielder?",
+    "AnimeAns":"Kurosaki Ichigo"},
+    {"blockNo":"F",
+    "prevHash":"a9f57a5ad664b84f66106e37aef0572669a8eca5fd371d4aaf5a089aba5ac2bc",
+    "hash":"af6d94a1e541bf1ece0589c47d9c9745b4a8837693decf6a34129e2de8249a18",
+    "LocationQues":"Where would you send a person like this?",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"Sniping like a pro in a game, only to get scared by a finger gun",
+    "AnimeAns":"Asada Shino"},
+    {"blockNo":"E",
+    "prevHash":"af6d94a1e541bf1ece0589c47d9c9745b4a8837693decf6a34129e2de8249a18",
+    "hash":"97b3546f0dc7779a7c8d4861bfe892680209d18bbb8ceab3b312ee570012786f",
+    "LocationQues":"An introverted girl's motivation can make you run like flash here",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"Every time I step outside, my heart races and my palms sweat. I feel like everyone is watching me, judging me, and laughing at me behind my back. I worry that I'll say the wrong thing or do something embarrassing, and that everyone will see me for the awkward, underconfident person that I am. Sometimes, I wish I could just stay at home and never have to face the world outside. I even tried my hands in music, but I am still the unnoticable rock of my class, who no one pays any attention to.",
+    "AnimeAns":"Hitori Gotoh"}],
+    [{"blockNo":"S",
+    "prevHash":"MaskIITkgp",
+    "hash":"TreasureHunt",
+    "LocationQues":"",
+    "LocationAns":"",
+    "AnimeQues":"",
+    "AnimeAns":""},
+    {"blockNo":"E",
+    "prevHash":"TreasureHunt",
+    "hash":"17c2e21ebc38f2c8bf966136ae9e5ba30f3139c10ac18123be3e6e24564d2159",
+    "LocationQues":"Do you remember where our fight happened after we discussed this?",
+    "LocationAns":"Gnan Ghosh",
+    "AnimeQues":"You might like a girl with an unshakable personality, which doesn't make you suitable to be my friend",
+    "AnimeAns":"Aoi Todo"},
+    {"blockNo":"A",
+    "prevHash":"17c2e21ebc38f2c8bf966136ae9e5ba30f3139c10ac18123be3e6e24564d2159",
+    "hash":"1dd05ee52949e9dc7e8ced78a764d91cc231c4398f5d4c22636b50f2e6877e2e",
+    "LocationQues":".With a yellow ball, Ace's true form revealed, in this court of anime.",
+    "LocationAns":"Tennis Court",
+    "AnimeQues":"HASHIRE SORI YO\nKAZE NO YOU NI\nTSUKIMIHARA WO\nPADORU PADORU",
+    "AnimeAns":"Nero Claudius"},
+    {"blockNo":"B",
+    "prevHash":"1dd05ee52949e9dc7e8ced78a764d91cc231c4398f5d4c22636b50f2e6877e2e",
+    "hash":"ce8bf610c3e57166586bb292a2105f4392e03e7ce65a40431c33ec832fc3d992",
+    "LocationQues":"Considering my magic affinity, there's only one place which comes to my mind",
+    "LocationAns":"Swimming Pool",
+    "AnimeQues":"My clan speaks without talking but I do not have that ability despite being a high level mage",
+    "AnimeAns":"Roxy Migurdia"},
+    {"blockNo":"F",
+    "prevHash":"ce8bf610c3e57166586bb292a2105f4392e03e7ce65a40431c33ec832fc3d992",
+    "hash":"c1581964a5d4543b20e9db89171f92ac48e84552decb47e533fd2a3930118f86",
+    "LocationQues":"If someone sees my love for you, I wonder where they will send me",
+    "LocationAns":"Councelling Centre",
+    "AnimeQues":"I love you so much that I am willing to kill for you while cutting my life by half, twice.",
+    "AnimeAns":"Misa Amane"},
+    {"blockNo":"D",
+    "prevHash":"c1581964a5d4543b20e9db89171f92ac48e84552decb47e533fd2a3930118f86",
+    "hash":"2f86616f17a45a3bb7e63970a2bdb01f13767f441a84ad30e570ed254176cf31",
+    "LocationQues":".A place for bukatsu, but not where you came from",
+    "LocationAns":"Tech Club",
+    "AnimeQues":"You cant beat me because my right hand won't let you reach me",
+    "AnimeAns":"Shinichi Izumi"},
+    {"blockNo":"C",
+    "prevHash":"2f86616f17a45a3bb7e63970a2bdb01f13767f441a84ad30e570ed254176cf31",
+    "hash":"53338326f805ff8f99ccad1687d2ade39459dc8e7143115c46fc5da75e834ab2",
+    "LocationQues":"-Utsukashi niwa to kazeyo, go to the nearest gazebo",
+    "LocationAns":"park",
+    "AnimeQues":"The mask society logo is inspired by the mask of which character?",
+    "AnimeAns":"Ken Kaneki"}]
+  ]
+ 
+    const stsub = document.getElementById("stsubmit");
+    const grsub = document.getElementById("grsubmit");
+    const ansub = document.getElementById("ansubmit");
+    const stageno = document.querySelectorAll(".stageno");
+    const home = document.getElementById("home");
+    const station = document.getElementById("station");
+    const group = document.getElementById("group");
+    const stage = document.getElementById("stage");
+    const answer = document.getElementById("answer");
+    const result = document.getElementById("result");
+    const grback = document.getElementById("grback");
+    const stampBack = document.getElementById("stampBack");
+    const anback = document.getElementById("anback");
+    const random1 = document.getElementById("random1");
+    const lab = document.getElementById("lab");
+    const ans = document.getElementById("ans");
+    const attemptAgain = document.getElementById("attemptAgain");
+    const LocQues = document.getElementById("LocQues");
+    const AnimeQue = document.getElementById("AnimeQue");
+    var groupno = '';
+    var stageNo = '';
+    var stationno = '';
+    var stationno1 = '';
+    
+        home.addEventListener("click", () => {
+            station.style.display = "none";
+            group.style.display = "block";
+            stage.style.display = "none";
+            answer.style.display = "none";
+            result.style.display = "none";
+            home.style.display = "none";
+           
+            // nextStageQues.style.display = "none";
+           
+            random1.innerHTML = "";
+            document.getElementById("stationno").value = "";
+            document.getElementById("groupno").value = "";
+            ans.value= '';
+            LocQues.innerHTML='';
+            AnimeQue.innerHTML = '';
+            attemptAgain.style.display = "none";
+          
+            
+        });
+        grback.addEventListener("click",()=>{
+          group.style.display = "none";
+          station.style.display = "block";
+          document.getElementById("stationno").value = '';
+          document.getElementById("groupno").value = '';
+
+        })
+        stampBack.addEventListener("click",()=>{
+          group.style.display = "block";
+          document.getElementById("groupno").value = '';
+          stage.style.display = "none";
+          random1.innerHTML = '' ;
+        });
+        anback.addEventListener("click",()=>{
+          answer.style.display = "none";
+          stage.style.display = "block";
+          ans.value = '';
+        })
+    
+    stsub.addEventListener("click", () => {
+       stationno = document.getElementById("stationno").value;
+      
+       switch(stationno){
+        case '1':stationno1="A";break;
+        case '2':stationno1="B";break;
+        case '3':stationno1="C";break;
+        case '4':stationno1="D";break;
+        case '5':stationno1="E";break;
+        case '6':stationno1="F";break;
+       }
+       
+        if (stationno != "") {
+          if(stationno < 7){
+            station.style.display = "none";
+            group.style.display = "block";
+            home.style.display = "block";
+            // random1.innerHTML = "Station No. " + stationno;
+          }
+          else{
+            
+            alert("Enter valid station no !!");
+           document.getElementById("stationno").value = ''
+          
+          }
+           
+        }
+        else {
+            alert("Enter Station No.");
+        }
+          
+    })
+    grsub.addEventListener("click", () => {
+        groupno = document.getElementById("groupno").value;
+        if (groupno != "") {
+          if(groupno <=30){
+            group.style.display = "none";
+            stage.style.display = "block";
+            
+            random1.innerHTML = "Team No : " + groupno  ;
+          }
+          else{
+            alert("Enter valid group no");
+            document.getElementById("groupno").value = '';
+          }
+           
+        }
+        else {
+            alert("Enter Group No.");
+        }
+       
+    })
+    stageno.forEach((s) => {
+        
+        s.addEventListener("click", () => {
+          stageNo = s.innerHTML;
+          if(stageNo=='Start The Hunt' ){
+          answer.style.display = "none";
+          stage.style.display = "none";
+          result.style.display = "block";
+          result1.innerHTML = "All the Best!! Start your Hunt &#128077"; 
+          groupno -=1;
+          LocQues.innerHTML = "Clue which takes you to next Location:<br>" + participantsData[groupno][1].LocationQues.split('\n').join('<br>') ;
+          AnimeQue.innerHTML = "Question to be answered at next Location:<br>" + participantsData[groupno][1].AnimeQues.split('\n').join('<br>'); 
+          home.style.display= "block";
+          }
+          else{
+            stage.style.display = "none";
+            answer.style.display = "block";
+            lab.innerHTML = "No of Stamps " + stageNo +" ";
+          }
+            
+        });
+        
+    })
+    attemptAgain.addEventListener("click",()=>{
+      answer.style.display = "block";
+      attemptAgain.style.display = "none";
+      result.style.display = "none";
+      
+    })
+    ansub.addEventListener("click",()=>{
+        
+        const answerAni = ans.value;
+        answer.style.display = "none";
+        // if(stageNo=='End'){
+        //   if(answerAni.toLowerCase() == participantsData[groupno-1][7].AnimeAns)
+        //   {
+        //    result.style.display = "block";
+        //    result1.innerHTML = "Congratulations!! You are the winner &#128175 &#128176"; 
+        //    random.innerHTML = ''
+        //   }
+        //   else
+        //   {
+        //   result.style.display = "block";
+        //   result1.innerHTML = "Wrong Answer &#128542";
+        //   attemptAgain.style.display = "block";
+        //   }
+        // }
+        // else{
+          if(stationno1==participantsData[groupno-1][parseInt(stageNo)+1].blockNo)
+          {  let ansCompare = participantsData[groupno-1][parseInt(stageNo)+1].AnimeAns;
+            if(!(answerAni.localeCompare(ansCompare, undefined, { sensitivity: 'accent' })))
+            { 
+            result.style.display = "block";
+            result1.innerHTML = "Correct Answer &#128525";
+            groupno -=1;
+            LocQues.innerHTML = "Question which takes you to next Location:<br>" + participantsData[groupno][parseInt(stageNo)+1+1].LocationQues.split('\n').join('<br>') ;
+            AnimeQue.innerHTML = "Question to be answered at next Location:<br>" + participantsData[groupno][parseInt(stageNo)+1+1].AnimeQues.split('\n').join('<br>');
+            home.style.display= "block";
+            }
+           else
+           {
+            result.style.display = "block";
+            result1.innerHTML = "Wrong Answer &#128542";
+            // alert("WrongAns !!");
+            attemptAgain.style.display = "block";
+           }
+        }
+            
+        else
+        {
+          result.style.display = "block";
+          result1.innerHTML = "Wrong Answer &#128542";
+          // alert("WrongAns !!");
+          attemptAgain.style.display = "block";
+        }
+       
+        }
+
+    // }
+    )
+</script>
+</html>
